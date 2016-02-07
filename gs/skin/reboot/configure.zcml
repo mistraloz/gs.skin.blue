@@ -6,19 +6,19 @@
     - one for the layer attached to the skin.
   -->
   <interface
-    interface=".interfaces.IGSBlueLayer"
+    interface=".interfaces.IGSRebootLayer"
     type="zope.publisher.interfaces.browser.IBrowserSkinType" />
   <interface
-    interface=".interfaces.IGSBlueSkin"
+    interface=".interfaces.IGSRebootSkin"
     type="zope.publisher.interfaces.browser.IBrowserSkinType" />
   <!--
     - Skins have a name, provided by a utility. It is this name that is
     - looked up by the ++skin++ directive in the URL
   -->
   <utility
-    component=".interfaces.IGSBlueSkin"
+    component=".interfaces.IGSRebootSkin"
     provides="zope.publisher.interfaces.browser.IBrowserSkinType"
-    name="gs_blue" />
+    name="gs_reboot" />
 
   <!--
     - The actual resources. Normally a resource is associated with a
@@ -27,54 +27,54 @@
   <browser:resource
     name="site-20151027.css"
     file="browser/css/site-min.css"
-    layer=".interfaces.IGSBlueLayer"
+    layer=".interfaces.IGRebootLayer"
     permission="zope2.Public" />
   <browser:resource
     name="site-20140515.css"
     file="browser/css/site-min.css"
-    layer=".interfaces.IGSBlueLayer"
+    layer=".interfaces.IGSRebootLayer"
     permission="zope2.Public" />
   <browser:resource
     name="site-20131105.css"
     file="browser/css/site-min.css"
-    layer=".interfaces.IGSBlueLayer"
+    layer=".interfaces.IGSRebootLayer"
     permission="zope2.Public" />
   <browser:resource
     name="site-20110714.css"
     file="browser/css/site-min.css"
-    layer=".interfaces.IGSBlueLayer"
+    layer=".interfaces.IGSRebootLayer"
     permission="zope2.Public" />
   <browser:resource
     name="site-20110308.css"
     file="browser/css/site-min.css"
-    layer=".interfaces.IGSBlueSkin"
+    layer=".interfaces.IGSRebootSkin"
     permission="zope2.Public" />
   <browser:resource
     name="site-20110406.css"
     file="browser/css/site-min.css"
-    layer=".interfaces.IGSBlueSkin"
+    layer=".interfaces.IGSRebootSkin"
     permission="zope2.Public" />
   <!-- However, in the case of these two resources we want them to
-  - be inherited, so we associtate them with IGSBlueLayer -->
+  - be inherited, so we associtate them with IGSRebootLayer -->
   <browser:resource
     name="site-blue-20101213.css"
     file="browser/css/site-min.css"
-    layer=".interfaces.IGSBlueLayer"
+    layer=".interfaces.IGSRebootLayer"
     permission="zope2.Public" />
   <browser:resourceDirectory
     name="jquery-icons"
     directory="browser/jquery/css/ui-lightness/images/"
-    layer=".interfaces.IGSBlueLayer"
+    layer=".interfaces.IGSRebootLayer"
     permission="zope2.Public" />
 
   <!--The viewlet to add the blue colour to the Notifications css. -->
   <browser:viewlet
-    name="gs-skin-blue-colour"
+    name="gs-skin-reboot-colour"
     manager="gs.content.email.css.interfaces.IHTMLEmailStyle"
-    layer=".interfaces.IGSBlueLayer"
+    layer=".interfaces.IGSRebootLayer"
     class="gs.viewlet.SiteViewlet"
     template="browser/templates/email.pt"
-    title="Blue CSS"
+    title="Reboot CSS"
     weight="127"
     permission="zope2.Public" />
 

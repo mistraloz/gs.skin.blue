@@ -16,12 +16,12 @@ from zope.app.rotterdam import Rotterdam
 from zope.publisher.interfaces.browser import IBrowserRequest
 
 
-class IGSBlueLayer(IBrowserRequest):
-    '''GroupServer Blue Layer'''
+class IGSRebootLayer(IBrowserRequest):
+    '''GroupServer Reboot Camp Layer'''
     # Layers just inherit from IBrowserRequest.
 
 
-class IGSBlueSkin(IGSBlueLayer, Rotterdam):
-    '''GroupServer Blue Skin'''
+class IGSRebootSkin(IGSRebootLayer, Rotterdam):
+    '''GroupServer Reboot Camp Skin'''
     # Skins inherit from a bunch of layers. In this case the blue layer
     # and the core Zope Rotterdam layer.
