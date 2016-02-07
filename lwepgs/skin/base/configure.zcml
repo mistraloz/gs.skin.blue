@@ -6,17 +6,17 @@
     - one for the layer attached to the skin.
   -->
   <interface
-    interface=".interfaces.IGSRebootLayer"
+    interface=".interfaces.IGSLWEPLayer"
     type="zope.publisher.interfaces.browser.IBrowserSkinType" />
   <interface
-    interface=".interfaces.IGSRebootSkin"
+    interface=".interfaces.IGSLWEPSkin"
     type="zope.publisher.interfaces.browser.IBrowserSkinType" />
   <!--
     - Skins have a name, provided by a utility. It is this name that is
     - looked up by the ++skin++ directive in the URL
   -->
   <utility
-    component=".interfaces.IGSRebootSkin"
+    component=".interfaces.IGSLWEPSkin"
     provides="zope.publisher.interfaces.browser.IBrowserSkinType"
     name="gs_reboot" />
 
@@ -27,54 +27,54 @@
   <browser:resource
     name="site-20151027.css"
     file="browser/css/site.css"
-    layer=".interfaces.IGSRebootLayer"
+    layer=".interfaces.IGSLWEPLayer"
     permission="zope2.Public" />
   <browser:resource
     name="site-20140515.css"
     file="browser/css/site.css"
-    layer=".interfaces.IGSRebootLayer"
+    layer=".interfaces.IGSLWEPLayer"
     permission="zope2.Public" />
   <browser:resource
     name="site-20131105.css"
     file="browser/css/site.css"
-    layer=".interfaces.IGSRebootLayer"
+    layer=".interfaces.IGSLWEPLayer"
     permission="zope2.Public" />
   <browser:resource
     name="site-20110714.css"
     file="browser/css/site.css"
-    layer=".interfaces.IGSRebootLayer"
+    layer=".interfaces.IGSLWEPLayer"
     permission="zope2.Public" />
   <browser:resource
     name="site-20110308.css"
     file="browser/css/site.css"
-    layer=".interfaces.IGSRebootSkin"
+    layer=".interfaces.IGSLWEPSkin"
     permission="zope2.Public" />
   <browser:resource
     name="site-20110406.css"
     file="browser/css/site.css"
-    layer=".interfaces.IGSRebootSkin"
+    layer=".interfaces.IGSLWEPSkin"
     permission="zope2.Public" />
   <!-- However, in the case of these two resources we want them to
-  - be inherited, so we associtate them with IGSRebootLayer -->
+  - be inherited, so we associtate them with IGSLWEPLayer -->
   <browser:resource
     name="site-blue-20101213.css"
     file="browser/css/site.css"
-    layer=".interfaces.IGSRebootLayer"
+    layer=".interfaces.IGSLWEPLayer"
     permission="zope2.Public" />
   <browser:resourceDirectory
     name="jquery-icons"
     directory="browser/jquery/css/ui-lightness/images/"
-    layer=".interfaces.IGSRebootLayer"
+    layer=".interfaces.IGSLWEPLayer"
     permission="zope2.Public" />
 
   <!--The viewlet to add the blue colour to the Notifications css. -->
   <browser:viewlet
     name="gs-skin-reboot-colour"
     manager="gs.content.email.css.interfaces.IHTMLEmailStyle"
-    layer=".interfaces.IGSRebootLayer"
+    layer=".interfaces.IGSLWEPLayer"
     class="gs.viewlet.SiteViewlet"
     template="browser/templates/email.pt"
-    title="Reboot CSS"
+    title="LWEP CSS"
     weight="127"
     permission="zope2.Public" />
 
@@ -82,7 +82,7 @@
   <browser:resource
     name="reboot-navbar.js"
     file="browser/js/navbar.js"
-    layer=".interfaces.IGSRebootLayer"
+    layer=".interfaces.IGSLWEPLayer"
     permission="zope2.Public" />
 
 </configure>
