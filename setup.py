@@ -45,7 +45,7 @@ setup(
         "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 2.7",
     ],
-    keywords='skin, groupserver, reboot-camp, css',
+    keywords='skin, groupserver, css',
     author='Mistral Oz',
     author_email='mistral@ozm.fr',
     url='https://github.com/mistraloz/{0}'.format(name),
